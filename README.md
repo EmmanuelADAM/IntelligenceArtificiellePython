@@ -7,6 +7,7 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
 - **très petits exemples pour comprendre les réseaux simples**
   - [TestET.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestET.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du ET logique
   - [TestOUX.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestOUX.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du OU Exclusif logique
+  - [DetectionSpam.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/DetectionSpam.ipynb)   : petit notebook python pour un exercie de détection très simple de spam par réseaux de neurones
 - **un exemple complet, quasi deep-learning**
   - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes
 
