@@ -7,7 +7,10 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
 - **très petits exemples pour comprendre les réseaux simples**
   - [TestET.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestET.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du ET logique
   - [TestOUX.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestOUX.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du OU Exclusif logique
-  - [DetectionAlertes.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master//SolutionDetectionAlertes.ipynb)   : petit notebook python pour un exercice de détection très simple de messages douteux par réseaux de neurones
+  - [DetectionAlertes.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/DetectionAlertes.ipynb)   :  petit exercice en notebook python de la détection très simple de messages douteux par réseaux de neurones
+  - [SolutionDetectionAlertes.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionDetectionAlertes.ipynb)   : solution au petit exercice en notebook python de la détection très simple de messages douteux par réseaux de neurones
+  - [ClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/ClasserMail.ipynb)   :  petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
+  - [SolutionClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionClasserMail.ipynb)   : solution au petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
 - **un exemple complet, quasi deep-learning**
   - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes
 
