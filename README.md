@@ -20,7 +20,7 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
 
 ## Machine Learning via GYM
 - [TPMLIntroGym.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLIntroGym.ipynb) : présentation de l'environnement de test [Gym](https://gym.openai.com) (Open AI)
-- [TPMLGymGA.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymGA.ipynb) : sujet de TP sur la réalisation d'un algo génétique pour l'environnement MoutainCar 
-- [TPMLGymGA-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymGA-Solution.ipynb) : exemple de solution pour le TP sur la réalisation d'un algo génétique pour l'environnement MoutainCar 
-- [TPMLGymQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : sujet de TP sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe
-- [TPMLGymQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning-Solution.ipynb) : exemple de solution au sujet de TP sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe
+- [MLGymGA.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/MLGymGA.ipynb) : sujet sur la réalisation d'un algo génétique pour l'environnement MoutainCar 
+- [TPMLGymGA-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymGA-Solution.ipynb) : exemple de solution pour le sujet sur la réalisation d'un algo génétique pour l'environnement MoutainCar 
+- [TPMLGymQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : sujet sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe
+- [TPMLGymQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning-Solution.ipynb) : exemple de solution au sujet sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe
