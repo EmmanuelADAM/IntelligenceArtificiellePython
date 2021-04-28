@@ -15,6 +15,8 @@ python gym/envs/box2d/lunar_lander.py
 To play yourself, run:
 python examples/agents/keyboard_agent.py LunarLander-v2
 Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.
+
+slightly modified by E.Adam to match with the Practical Exercices (random initialisation and random forces removed)
 """
 
 
