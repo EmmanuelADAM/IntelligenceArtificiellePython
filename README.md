@@ -13,6 +13,8 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
   - [SolutionClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionClasserMail.ipynb)   : solution au petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
 - **un exemple complet, quasi deep-learning**
   - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes
+  - [TPClassementDeTheses.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPClassementDeTheses.ipynb)	: notebook en python sur le TP de classement automatique de thèses scientifiques
+
 
 ## Logique floue
 - [choixSejourLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixSejourLogiqueFloue.ipynb)	: notebook python montrant l'utilisation de la logique floue pour prendre une décision sur la longueur de congés
