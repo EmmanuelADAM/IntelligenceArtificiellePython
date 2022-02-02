@@ -11,6 +11,9 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
   - [SolutionDetectionAlertes.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionDetectionAlertes.ipynb)   : solution au petit exercice en notebook python de la détection très simple de messages douteux par réseaux de neurones
   - [ClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/ClasserMail.ipynb)   :  petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
   - [SolutionClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionClasserMail.ipynb)   : solution au petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
+  - [PredireReussite.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussite.ipynb)   : Exercice de prédiction de réussite scolaire selon le contexte personnel et social
+  
+  
 - **quasi deep-learning**
   - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes
   - [TPClassementDeTheses.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPClassementDeTheses.ipynb)	: notebook en python sur le TP de classement automatique de thèses scientifiques
