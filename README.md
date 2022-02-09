@@ -13,7 +13,7 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
   - [SolutionClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionClasserMail.ipynb)   : solution au petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
   - [PredireReussite.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussite.ipynb)   : Exercice de prédiction de réussite scolaire selon le contexte personnel et social
   - [PredireReussiteSolution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussiteSolution.ipynb)   : Solution à l'exercice de prédiction de réussite scolaire selon le contexte personnel et social. Solution où le réseau donne 1 seule valeur de sortie, à multiplier pour estimer la note à l'examen
-  - [PredireReussiteSolution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussiteSolution.ipynb)   : Un autre solution à l'exercice de prédiction de réussite scolaire selon le contexte personnel et social. Solution où le réseau donne 8 valeurs de sortie, estimant les probabilité d'obtenir des notes entre Echec (neurone 0) et AA (neurone 7)
+  - [PredireReussiteSolutionBis.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussiteSolutionBis.ipynb)   : Un autre solution à l'exercice de prédiction de réussite scolaire selon le contexte personnel et social. Solution où le réseau donne 8 valeurs de sortie, estimant les probabilité d'obtenir des notes entre Echec (neurone 0) et AA (neurone 7)
   
   
 - **quasi deep-learning**
