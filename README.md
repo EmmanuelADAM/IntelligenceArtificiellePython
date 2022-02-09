@@ -12,6 +12,7 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
   - [ClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/ClasserMail.ipynb)   :  petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
   - [SolutionClasserMail.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionClasserMail.ipynb)   : solution au petit exercice en notebook python de la classification très simple de mails par réseaux de neurones
   - [PredireReussite.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussite.ipynb)   : Exercice de prédiction de réussite scolaire selon le contexte personnel et social
+  - [PredireReussiteSolution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PredireReussiteSolution.ipynb)   : Solution à l'exercice de prédiction de réussite scolaire selon le contexte personnel et social. Solution où le réseau donne 1 seule valeur de sortie, à multiplier pour estimer la note à l'examen
   
   
 - **quasi deep-learning**
