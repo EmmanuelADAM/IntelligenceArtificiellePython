@@ -1,7 +1,7 @@
 # IntelligenceArtificiellePython
 Ensemble de petits codes python relatif à l'IA
 
-des notebooks à ouvrir avec [collab](https://colab.research.google.com) de préférence ou avec les notebook de la suite [anaconda](https://www.anaconda.com/distribution/) : 
+des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préférence ou avec les notebooks de la suite [anaconda](https://www.anaconda.com/distribution/) : 
 
 ## Réseaux de neurones
 - **très petits exemples pour comprendre les réseaux simples**
@@ -25,7 +25,8 @@ des notebooks à ouvrir avec [collab](https://colab.research.google.com) de pré
 
 ## Logique floue
 - [choixSejourLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixSejourLogiqueFloue.ipynb)	: notebook python montrant l'utilisation de la logique floue pour prendre une décision sur la longueur de congés
-- [logique_floue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/logique_floue.ipynb) : notebook python montrant l'utilisation de la logique floue pour prendre une décision sur l'urgence de freiner en fonction de la position et de la taille d'un pieton sur le trottoir
+- [logique_floue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/logique_floue.ipynb) : notebook python montrant l'utilisation de la logique floue pour prendre une décision sur l'urgence de freiner en fonction de la position et de la taille d'un piéton sur le trottoir
+- [choixClimLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixClimLogiqueFloue.ipynb) : TP en notebook python sur l'aide à la décision pour la régulation d'un climatiseur.
 
 ## Machine Learning via GYM
 - [TPMLIntroGym.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLIntroGym.ipynb) : présentation de l'environnement de test [Gym](https://gym.openai.com) (Open AI)
