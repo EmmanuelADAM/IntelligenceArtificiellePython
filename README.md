@@ -24,7 +24,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 
 ## Logique floue 
-- [choixSejourLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixSejourLogiqueFloue.ipynb)	: notebook python montrant l'utilisation de la logique floue pour prendre une décision sur la longueur de congés
+- [choixSejourLogiqueFloueSolution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixSejourLogiqueFloueSolution.ipynb)	: notebook python montrant l'utilisation de la logique floue pour prendre une décision sur la longueur de congés
 - [logique_floue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/logique_floue.ipynb) : notebook python montrant l'utilisation de la logique floue pour prendre une décision sur l'urgence de freiner en fonction de la position et de la taille d'un piéton sur le trottoir
 - [choixClimLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixClimLogiqueFloue.ipynb) : TP en notebook python sur l'aide à la décision pour la régulation d'un climatiseur.
 
