@@ -37,7 +37,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 <!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .-->
   - vérifier la performance du simple QLearning vs le Double QLearning
   - reprenez au choix le simple QLearning, ou le Double Q-Learning et appliquez l'algorithme sur l'environnement CliffWalking-v0 (point de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
-  
+   
 ```o  o  o  o  o  o  o  o  o  o  o  o```
 
 ```o  o  o  o  o  o  o  o  o  o  o  o```
