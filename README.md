@@ -39,7 +39,8 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 - [GymFrozenLakeQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : solution au sujet de Q-Learning simple sur l'environnement "Lac Gelé" de Gym.
 <!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .-->
   - vérifier la performance du simple QLearning vs le Double QLearning
-  - reprenez au choix le simple QLearning, ou le Double Q-Learning et appliquez l'algorithme sur l'environnement CliffWalking-v0 (point de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
+  - vérifier la performance du simple QLearning vs le Double QLearning vs le Delayed Q-Learning, et le Delayed Double QLearning
+  - reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement CliffWalking-v0 (point de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
    
 ```o  o  o  o  o  o  o  o  o  o  o  o```
 
@@ -48,3 +49,5 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 ```o  o  o  o  o  o  o  o  o  o  o  o```
 
 ```x  C  C  C  C  C  C  C  C  C  C  T```
+  - reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement Taxi-v3.
+  - Donnez la forme de la matrice Q s'il fallait appliquer le Q-Learning à l'environnement CartPole-v1
