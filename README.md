@@ -36,18 +36,24 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 - [MLGymGALunar.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/MLGymGALunar.ipynb) : sujet sur la réalisation d'un algo génétique pour l'environnement Lunar Lander.
 - [MLGymGAMoutainCar.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/MLGymGAMoutainCar.ipynb) : sujet sur la réalisation d'un algo génétique pour l'environnement MoutainCar. 
 <!-- [TPMLGymQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : sujet sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe gelé de Gym.-->
-- [GymFrozenLakeQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : solution au sujet de Q-Learning simple sur l'environnement "Lac Gelé" de Gym.
+### TP QLearning 
+A partir d'un exemple de QLearning pour le problème du lac gelé de OpenAI : 
+    - [GymFrozenLakeQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeQLearning.ipynb) : solution au sujet de Q-Learning simple sur l'environnement "Lac Gelé" de Gym.
 <!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .-->
+<br>
+- implémentez le **Double QLearning**
   - vérifier la performance du simple QLearning vs le Double QLearning
+<br>
+- implémentez le **Delayed QLearning**
   - vérifier la performance du simple QLearning vs le Double QLearning vs le Delayed Q-Learning, et le Delayed Double QLearning
-  - reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement CliffWalking-v0 (point de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
-   
-```o  o  o  o  o  o  o  o  o  o  o  o```
-
-```o  o  o  o  o  o  o  o  o  o  o  o```
-
-```o  o  o  o  o  o  o  o  o  o  o  o```
-
-```x  C  C  C  C  C  C  C  C  C  C  T```
-  - reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement Taxi-v3.
-  - Donnez la forme de la matrice Q s'il fallait appliquer le Q-Learning à l'environnement CartPole-v1
+<br>
+- Reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement **CliffWalking-v0** (point de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
+    - attention, aucune récompense (reward) en arrivant sur le but.... 
+    - il faudra ajouter soi-même le reward si 'done' est vrai..
+<br>
+- Reprenez ces algorithmes que vous avez développés et  appliquez les sur l'environnement **Taxi-v3**.
+<br>
+- Donnez la forme de la matrice Q s'il fallait appliquer le Q-Learning à l'environnement **CartPole-v1**. Expliquez ce qu'est le Deep Q-Learning.
+<br>
+- Citez des exemples réels d'applications industrielles, commerciales du Q-Learning
+----
