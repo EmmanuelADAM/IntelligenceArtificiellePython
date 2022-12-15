@@ -51,7 +51,7 @@ A partir d'un exemple de QLearning pour le problème du lac gelé de OpenAI :
 - Reprenez ces algorithmes que vous avez développés et appliquez-les sur l'environnement **CliffWalking-v0** (point 
   de départ en x, arrivée en T, coût de -1 par action sur o, -100 par action sur C).
     - attention, aucune récompense (reward) en arrivant sur le but.... 
-    - Voir ici un exemple de sortie pour le [DoubleQLearning appliqué au CliffWalking](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymCLIFFDoubleQLearningTO.ipynb)
+    - Voir ici un exemple de sortie pour le [DoubleQLearning appliqué au CliffWalking](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymCLIFFDoubleQLearningTODO.ipynb)
 
 - Reprenez ces algorithmes que vous avez développés et appliquez-les sur l'environnement **Taxi-v3**.
   - Voir ici un exemple de sortie pour le [DoubleQLearning appliqué au Taxi](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymTaxiDoubleQLearningTODO.ipynb)
