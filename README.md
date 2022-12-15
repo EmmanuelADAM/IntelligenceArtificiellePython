@@ -39,7 +39,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 ----
 
-### TP QLearning 
+### [TP QLearning](#tpqlearning) 
 A partir d'un exemple de QLearning pour le problème du lac gelé de OpenAI : 
  - [GymFrozenLakeQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeQLearning.ipynb) : solution au sujet de Q-Learning simple sur l'environnement "Lac Gelé" de Gym.
 <!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .-->
