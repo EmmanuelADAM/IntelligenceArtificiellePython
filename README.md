@@ -19,10 +19,11 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
   
   
 - **quasi deep-learning**
-  - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes
-  - [TPClassementDeTheses.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPClassementDeTheses.ipynb)	: notebook en python sur le TP de classement automatique de thèses scientifiques
-  - [TPFakeNews.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPFakeNews.ipynb)	: notebook en python sur le TP de classement automatique de fake news
-  - [TPChampis.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPChampis.ipynb)	: notebook en python sur le TP de classement automatique de champignons
+  - [SolutionTPDetectionDeSentiments.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/SolutionTPDetectionDeSentiments.ipynb)	: notebook en python montrant l'apprentissage par réseaux de neurones pour la classification de textes.
+  - [TPClassementDeTheses.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPClassementDeTheses.ipynb)	: notebook en python sur le TP de classement automatique de thèses scientifiques.
+  - [TPFakeNews.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPFakeNews.ipynb)	: notebook en python sur le TP de classement automatique de fake news.
+  - [TPChampis.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPChampis.ipynb)	: notebook en python sur le TP de classement automatique de champignons.
+  - [TPProducts.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPProducts.ipynb)	: notebook en python sur le TP de classement automatique d'avis sur des produits.
   
 
 
