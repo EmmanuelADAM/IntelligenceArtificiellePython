@@ -31,6 +31,8 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 - [logique_floue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/logique_floue.ipynb) : notebook python montrant l'utilisation de la logique floue pour prendre une décision sur l'urgence de freiner en fonction de la position et de la taille d'un piéton sur le trottoir. Les règles semblent peut complètes; proposer une amélioration...
 - [choixSejourLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixSejourLogiqueFloue.ipynb)	: notebook python montrant l'utilisation de la logique floue pour prendre une décision sur la longueur de congés
 - [choixClimLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixClimLogiqueFloue.ipynb) : TP en notebook python sur l'aide à la décision pour la régulation d'un climatiseur.
+- [choixActiviteLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/choixActiviteLogiqueFloue.ipynb) : TP en notebook python sur l'aide à la décision pour le choix de la durée d'une activité physique extérieure.
+- [PerformanceLogiqueFloue.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/PerformanceLogiqueFloue.ipynb) : TP en notebook python sur l'aide à la prédiction sur la compétence d'une personne selon ses résultats et son comportement social.
 
 ## Machine Learning via GYM
 - [TPMLIntroGym.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLIntroGym.ipynb) : présentation de l'environnement de test [Gym](https://gym.openai.com) (Open AI)
