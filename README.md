@@ -25,6 +25,8 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
   - [TPChampis.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPChampis.ipynb)	: notebook en python sur le TP de classement automatique de champignons.
   - [TPProducts.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPProducts.ipynb)	: notebook en python sur le TP de classement automatique d'avis sur des produits.
   
+- **hugging face**
+  - [introHuggingFace.ipynb](./introHuggingFace.ipynb): notebook en python sur le TP de découverte de Huggingface.
 
 
 ## Logique floue 
