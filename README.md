@@ -5,7 +5,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 
 ## Logique classique
-- **Davis et Puttman** : reprenez le [code fourni](./DavisPutman.py) et optimisez le selon votre choix pour tenter d'accélérer la résolution. C'est à dire que vous tenterez d'organiser les choix lorsque plusieurs sont possible à l'activation d'une règle.
+- **Davis et Putman** : reprenez le [code fourni](./DavisPutman.py) et optimisez le selon votre choix pour tenter d'accélérer la résolution. C'est à dire que vous tenterez d'organiser les choix lorsque plusieurs sont possibles à l'activation d'une règle.
 
 ## Réseaux de neurones
 - **très petits exemples pour comprendre les réseaux simples**
