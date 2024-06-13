@@ -183,6 +183,41 @@ def DP(clauses:list)->bool:
     return mondes_unis
 
 
+def lire_cnf(fichier):
+    """
+    Lit un fichier CNF en format DIMACS et retourne une liste de listes représentant les clauses.
+
+    :param fichier: Le chemin du fichier CNF à lire au format DIMACS comme : 
+    p cnf 3 4
+    -1 2 0
+    -2 3 0
+    1 0
+    -3 0
+    :return: Une liste de listes où chaque sous-liste représente une clause. comme : 
+    [[-1,2], [-2,3], [1], [3]]
+    """
+    clauses = []
+
+    with open(fichier, 'r') as f:
+        for ligne in f:
+            if ligne.startswith("%"):break
+            # Ignorer les lignes de commentaires et le préambule
+            if ligne.startswith('c') or ligne.startswith('p'):
+                continue
+            
+            # Diviser la ligne en entiers
+            literals = list(map(int, ligne.split()))
+            
+            # Retirer le 0 de fin de clause
+            if literals[-1] == 0:
+                literals.pop()
+            
+            # Ajouter la clause à la liste des clauses
+            if literals:
+                clauses.append(literals)
+
+    return clauses
+
 
 exo4 = [[1, -2, 3, -4, -5, -6], [2, 3], [2, 3, 4, 7, 6], [2, -4, 7, -5], [2, -3, 8, -6], [2, -4, 5, -8], [-2, -3], [-2, -3, -4], [-2, 3, 4], [-2, -4, 7], [-2, -7, 5], [-8, -6], [8, 6], [-8, 6]]
 
