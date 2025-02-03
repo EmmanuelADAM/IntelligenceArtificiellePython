@@ -9,6 +9,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 ## Réseaux de neurones
 - **très petits exemples pour comprendre les réseaux simples**
+  - [DetectionSignes.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/DetectionSignesArithmetique.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage de détection de signes arithmétiques.
   - [TestET.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestET.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du ET logique
   - [TestET-TensorBoard.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestET-TensorBoard.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du ET logique. Et l'utilisation de l'outil TensorBoard pour étudier l'apprentissage du réseau défini.
   - [TestOUX.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TestOUX.ipynb)	: petit notebook python montrant la définition d'un réseau de neurones avec tensorflow pour l'apprentissage du OU Exclusif logique
