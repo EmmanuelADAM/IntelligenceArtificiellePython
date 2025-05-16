@@ -31,7 +31,11 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
   - [TPProducts.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPProducts.ipynb)	: notebook en python sur le TP de classement automatique d'avis sur des produits.
 
 ### Réseaux récurrents
-  
+  - [memoryNN_rnn](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/memoryNN_rnn.ipynb): notebook en python, démo de réseau LSTM pour l'apprentissage de courbes "simples" de valeurs 
+  - [memoryNN_lstm](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/memoryNN_lstm.ipynb): notebook en python, démo de réseau LSTM pour l'apprentissage de courbes de valeurs
+  - [memoryNN_gru](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/memoryNN_gru.ipynb): notebook en python, démo de réseau LSTM pour l'apprentissage de courbes de valeurs "simples"
+  - [gru_text](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/gru_text.ipynb): notebook en python, utilisation de réseau GRU pour l'apprentissage de texte 
+
 ### Hugging face
   - [introHuggingFace.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/introHuggingFace.ipynb): notebook en python sur le TP de découverte de Huggingface.
 
