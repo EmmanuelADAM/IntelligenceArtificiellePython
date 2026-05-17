@@ -12,14 +12,15 @@
 - appliquez votre algorithme sur les exemples existants dans le code précédent
 
 ## Modèles
-- modifier les codes précédents pour qu'ils affiche le modèle trouvé.
-- modifier un des codes précédent pour qu'il affiche tous les modèles possibles.
+- implémenter maintenant la version de DPLL permettant de retourner le modèle donnant un succès (cf. algorithme avec la notion de propagation unitaire) 
+- implémenter une version qui affiche tous les modèles possibles à une formule.
 
 ## Tests
 Testez vos algorithmes sur 3 fichiers issus de [uf50](./uf50.zip) (10 énoncés de 50 variables et +- 200 clauses, chaque énoncé est satisfiable), et de [uuf50](./uuf50.zip) (10 énoncés de 50 variables et +- 200 clauses, chaque énoncé est insatisfiable.
 Testez avec [uuf150](./uuf150-01.cnf) (énoncé de 150 variables sur 645 clauses).
 Ces exemples sont issus de [www.cs.ubc.ca/~hoos/SATLIB/benchm.html](https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html)
 
+
 ## A rendre
-- Les codes, commentés en indiquant les idées d'optimisations
+- Les codes, commentés en indiquant vos d'optimisations, et idées d'optimisation
 - Les tests (avec le nombre d'appels aux algorithmes, et temps de résolution)

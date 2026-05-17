@@ -38,6 +38,7 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 ### Hugging face
   - [introHuggingFace.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/introHuggingFace.ipynb): notebook en python sur le TP de découverte de Huggingface.
+  - [introHuggingFaceDatasets.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/introHuggingFaceDatasets.ipynb): notebook en python pour expliquer la récupération de datasets à partir de Huggingface.
 
 
 ## Logique floue 
