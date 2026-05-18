@@ -13,6 +13,14 @@
 
 ## Modèles
 - implémenter maintenant la version de DPLL permettant de retourner le modèle donnant un succès (cf. algorithme avec la notion de propagation unitaire) 
+  - par exemple, vous pouvez implémenter en 1er la fonction  
+  ```def propagation_unitaire(F: list, m: dict) -> tuple:```  
+   qui effectue la propagation unitaire sur la formule F (```[[1,-2], [3,4]]``` par exemple) et le modèle m = dictionnaire de littéraux (entiers) affectés à des valeurs booléennes (```{1: False, 3: True, 4: True}``` par exemple) en réutilisant des fonctions fournies dans le support
+  - puis la fonction  
+  ```def DPLL_model(F: list, m: dict = None) -> dict | None:```  
+  qui lance la résolution avec un modèle initialement vide et retourne soit un modèle (dictionnaire), soit rien s'il n'y a pas de solution
+
+
 - implémenter une version qui affiche tous les modèles possibles à une formule.
 
 ## Tests
