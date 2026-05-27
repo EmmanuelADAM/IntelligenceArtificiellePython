@@ -70,5 +70,115 @@ COULEURS = ["Rouge", "Vert", "Bleu", "Jaune"]
 if m.solve():m.get_model()
 ```
 - et afficher la solution proprement.
+- vérifier s'il est possible de trouver une solution avec moins de couleurs
  
  
+
+---
+## TP SUDOKU
+
+Le Sudoku est un puzzle récent (1979). Dans sa forme classique, il consiste à remplir une grille de 9x9 de nombres entre 1 et 9 avec ces contraintes : 
+ - aucun chiffre ne peut être utilisé plus d'une fois sur une ligne
+ - aucun chiffre ne peut être utilisé plus d'une fois sur une colonne
+ - aucun chiffre ne peut être utilisé plus d'une fois dans les blocs 3x3 qui découpent la grille.
+
+ Voici un exemple de Sudoku : 
+![exemple](sudoku.png)
+ 
+ **Les variables**
+ 
+ Il faut trouver l'astuce qui permettent d'utiliser un solver booleen.
+ C'est-à-dire la signification des variables.  
+ On peut poser $x_{ijk}$ le fait que la cellule en $(i,j)$ soit de couleur $k$.
+
+ On peut utiliser cette fonction : 
+```
+def x(i,j,k):
+    return (i-1)*81 + (j-1)*9 + k
+```
+Il y a donc $9 \times 9 \times 9  = 729$ variables.
+
+Ainsi, 
+  - placer la valeur 1 dans la case 1,1 correspond à la variable 1
+  - placer la valeur 9 dans la case 9,9 correspond à la variable 729
+
+---
+Définissez les fonctions qui ajoutent les contraintes au solveur (Glucose3 par exemple) : 
+
+  - `def au_moins_une(model):`  
+chaque case (i,j) possède au moins une valeur parmi 1 à 9 : $(x_{ij1} \vee x_{ij2} \vee \dots x_{ij9} )$
+
+  - `def au_plus_une(model):`  
+chaque case (i,j) possède au plus une valeur parmi 1 à 9. Il n'est pas possible d'avoir la valeur 1 et la valeur 2 :  $\neg (x_{ij1} \wedge x_{ij2}) \equiv (\neg  x_{ij1} \vee \neg x_{ij2}) $.  
+De même il n'est pas possible d'avoir la valeur 1 et la valeur 3, ..., ni la valeur 8 et la valeur 9.  
+*$[-1,-2]$ signifie que la case en $(1,1)$ ne peut être égale à 1 et à 2.* 
+
+  - `def contraintes_lignes(model):`  
+pour une ligne i donnée, chaque colonne doit avoir un chiffre différent.  Il n'est pas possible d'avoir la valeur k dans les case (i,1) et (i,2) :  $\neg (x_{i1k} \wedge x_{i2k}) \equiv (\neg  x_{i1k} \vee \neg x_{i2k}) $.  
+De même, il n'est pas possible d'avoir k en colonne 1 et 3, ... 1 et 9, 2 et 3, ...., 8 et 9.
+
+  - `def contraintes_colonnes(model):`  
+pour une colonne j donnée, chaque ligne doit avoir un chiffre différent.  Il n'est pas possible d'avoir la valeur k dans les case (1,j) et (2,j) :  $\neg (x_{1jk} \wedge x_{2jk}) \equiv (\neg  x_{1jk} \vee \neg x_{2jk}) $.  
+De même, il n'est pas possible d'avoir k en lignes 1 et 3, ... 1 et 9, 2 et 3, ...., 8 et 9.
+
+  - `def contraintes_blocs(model):`  
+pour un bloc 3x3 donnée, chaque cellule doit avoir un chiffre différent.
+
+  - *combien de clauses sont ajoutées au modèle ?*
+----
+**Tester**
+
+Il devrait être possible de demander un sudoku rempli.  
+Utilisez les fonctions suivantes : 
+
+```
+
+# créer le solver et ajouter les contraintes
+def build_sudoku_solver() -> Glucose3:
+    solver = Glucose3()
+    au_moins_une(solver)
+    au_plus_une(solver)
+    contraintes_lignes(solver)
+    contraintes_colonnes(solver)
+    contraintes_blocs(solver)
+    return solver
+
+#affichage "agréable" du sudoku
+def display_solution(model):
+    solution = [[0 for _ in range(9)] for _ in range(9)]
+    for i in range(1,10):
+        for j in range(1,10):
+            for k in range(1, 10):
+                if model.get_model()[x(i,j,k)-1] > 0:
+                    solution[i-1][j-1] = k
+    for ligne in solution:
+        print(" ".join(str(k) for k in ligne))
+
+```
+Il vous reste à créer une instance de solver et à tester..
+```
+from pysat.solvers import Glucose3
+
+m =build_sudoku_solver()
+if m.solve():
+    display_solution(m)
+
+```
+----
+**Ajouter des indices**
+Le puzzle demande de remplir une grille à partir d'un pré remplissage.
+
+On suppose les indices sous cette forme : 
+`[(1, 1, 3), (8,7,5)]` pour indiquer que 3 est en position (1,1) et 5 en position (8,7).  
+Ceci correspond aux clauses posivites $(x_{113})$ et $(x_{875})$.
+
+
+Créer la fonction
+`def add_indices(model, indices)`  
+qui ajoute les clauses correspondant aux indices dans le modèle.
+
+---
+Résolvez le Sudoku suivant : 
+
+
+![sudoku à compléter](sudokuARemplir.png)
