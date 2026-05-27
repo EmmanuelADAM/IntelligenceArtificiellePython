@@ -67,8 +67,8 @@ COULEURS = ["Rouge", "Vert", "Bleu", "Jaune"]
 - Donnez le nb de clauses, 
 - lancer  la résolution
 ```m =build_sudoku_solver()
-if m.solve(): display_solution(m)
+if m.solve():m.get_model()
 ```
-- et afficher la résultat.
+- et afficher la solution proprement.
  
  
