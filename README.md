@@ -62,13 +62,14 @@ des notebooks à ouvrir avec [colab](https://colab.research.google.com) de préf
 
 - [MLGymGALunar.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/MLGymGALunar.ipynb) : sujet sur la réalisation d'un algo génétique pour l'environnement Lunar Lander.
 - [MLGymGAMoutainCar.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/MLGymGAMoutainCar.ipynb) : sujet sur la réalisation d'un algo génétique pour l'environnement MoutainCar. 
+
 <!-- [TPMLGymQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/TPMLGymQLearning.ipynb) : sujet sur la réalisation d'un algo de Q-Learning pour l'évolution dans un labyrinthe gelé de Gym.-->
 
-
+<!--
 ### [QLearning](#tpqlearning) 
 A partir d'un exemple de QLearning pour le problème du lac gelé de OpenAI : 
  - [GymFrozenLakeQLearning.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeQLearning.ipynb) : solution au sujet de Q-Learning simple sur l'environnement "Lac Gelé" de Gym.
-<!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .-->
+<!--- [GymFrozenLakeDoubleQLearning-Solution.ipynb](https://github.com/EmmanuelADAM/IntelligenceArtificiellePython/blob/master/GymFrozenLakeDoubleQLearning-Solution.ipynb) : solution au sujet de Double Q-Learning sur l'environnement "Lac Gelé" de Gym .- ->
 
 - implémentez le **Double QLearning**
   - vérifier la performance du simple QLearning vs le Double QLearning
@@ -92,4 +93,5 @@ A partir d'un exemple de QLearning pour le problème du lac gelé de OpenAI :
   exemples.
 
 - Citez des exemples réels d'applications industrielles, commerciales du Q-Learning
+-->
 ----
