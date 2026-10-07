@@ -1,0 +1,5 @@
+jupyter-book>=2
+axelrod>=4.13
+numpy
+matplotlib
+ipykernel

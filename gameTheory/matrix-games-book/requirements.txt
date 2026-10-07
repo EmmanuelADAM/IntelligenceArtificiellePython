@@ -1,0 +1,5 @@
+jupyter-book>=2
+nashpy
+numpy
+matplotlib
+ipykernel
