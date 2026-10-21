@@ -22,8 +22,9 @@ import pandas as pd
 
 np.set_printoptions(legacy="1.25")      # print numpy numbers as 3.0, not np.float64(3.0)
 
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+# === BOOK 1. bargaining problems
 
-# ================================================================ 1. bargaining problems
 def frontier(f, u1_max, u1_min=0.0, n=2001):
     """Points (u1, f(u1)) of a continuous frontier, for u1 in [u1_min, u1_max]."""
     u1 = np.linspace(u1_min, u1_max, n)
@@ -126,8 +127,10 @@ def plot_problem(points, d=(0, 0), solutions=None, labels=None, nash_curve=False
     return ax
 
 
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+# === BOOK 2. an electric bike and an eco-bonus
 
-# --- chapter 2: an electric bike and an eco-bonus
+
 COST = 60       # EUR: the seller's cost (reservation price)
 VALUE = 100     # EUR: what the bike is worth to the buyer
 CAP = 100       # EUR: maximum price allowed (price cap)
@@ -143,8 +146,8 @@ def bike_prices(bonus=0, cap=CAP, cost=COST, value=VALUE, n=4001):
     """All the possible prices: the seller covers its cost, the buyer gains, the cap holds."""
     return np.linspace(cost, min(cap, value + bonus), n)
 
-
-# --- chapter 3: a shared loading bay
+#OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+# === BOOK 3: a shared loading bay
 SLOTS = ("7h", "8h", "9h")
 VALUES_1 = {"7h": 5, "8h": 3, "9h": 1}     # GreenVan: early deliveries matter a lot
 VALUES_2 = {"7h": 4, "8h": 3, "9h": 2}     # CityCargo: more flexible
@@ -182,180 +185,3 @@ def ultimatum_gain(offer, thresholds):
     thresholds = np.asarray(thresholds)
     return (1 - offer) * np.mean(offer >= thresholds)
 
-
-# ================================================================ 4. negotiating agents (V2G)
-# An electric car owner (seller) sells energy to the grid operator (buyer) during a peak hour.
-SELLER_RES, SELLER_START = 10, 40      # c/kWh: minimum price (battery wear), first asking price
-BUYER_RES, BUYER_START = 30, 5         # c/kWh: maximum price (peak price), first offer
-
-
-class Negotiator:
-    """Base class. A negotiator proposes a price at each round (it never crosses its reservation).
-
-    role: "seller" (wants a high price) or "buyer" (wants a low price).
-    In `propose`, t is the time in [0, 1] (round / last round), mine and theirs the past offers.
-    """
-    name = "Negotiator"
-
-    def __init__(self, role, start=None, reservation=None):
-        self.role = role
-        seller = role == "seller"
-        self.start = start if start is not None else (SELLER_START if seller else BUYER_START)
-        self.reservation = reservation if reservation is not None else (SELLER_RES if seller else BUYER_RES)
-
-    def propose(self, t, mine, theirs):
-        raise NotImplementedError
-
-    def clip(self, price):
-        """Never go beyond the reservation price."""
-        if self.role == "seller":
-            return max(price, self.reservation)
-        return min(price, self.reservation)
-
-    def gain(self, price):
-        """Gain of an agreement at this price (0 if no deal)."""
-        if price is None:
-            return 0.0
-        return price - self.reservation if self.role == "seller" else self.reservation - price
-
-    def __repr__(self):
-        return f"{self.name} ({self.role})"
-
-
-class TimeDependent(Negotiator):
-    """p(t) = start + (reservation - start) * t^(1/beta): beta < 1 Boulware, beta > 1 Conceder."""
-
-    def __init__(self, role, beta=1.0, **kw):
-        super().__init__(role, **kw)
-        self.beta = beta
-        self.name = "Boulware" if beta < 1 else ("Conceder" if beta > 1 else "Linear")
-        self.name += f" b={beta:g}"
-
-    def propose(self, t, mine, theirs):
-        return self.start + (self.reservation - self.start) * t ** (1 / self.beta)
-
-
-class TitForTat(Negotiator):
-    """Concedes coef x the opponent's last concession (a small first step to start)."""
-
-    def __init__(self, role, coef=1.0, first_step=1.0, **kw):
-        super().__init__(role, **kw)
-        self.coef, self.first_step = coef, first_step
-        self.name = f"TitForTat c={coef:g}"
-
-    def propose(self, t, mine, theirs):
-        if not mine:
-            return self.start
-        if len(theirs) < 2:
-            step = self.first_step
-        else:
-            step = self.coef * abs(theirs[-1] - theirs[-2])
-        direction = -1 if self.role == "seller" else 1
-        return mine[-1] + direction * step
-
-
-class Distance(Negotiator):
-    """p' = p + k (p_received - p): moves a fraction k towards the opponent's last offer."""
-
-    def __init__(self, role, k=0.2, **kw):
-        super().__init__(role, **kw)
-        self.k = k
-        self.name = f"Distance k={k:g}"
-
-    def propose(self, t, mine, theirs):
-        if not mine:
-            return self.start
-        return mine[-1] + self.k * (theirs[-1] - mine[-1])
-
-
-def negotiate(seller, buyer, rounds=20, breakdown=0.0, seed=None, tol=0.5):
-    """Both agents announce an offer at each round (simultaneously).
-
-    Deal as soon as the buyer offers at least what the seller asks (up to `tol` c/kWh):
-    price = middle of the two offers.
-    breakdown: probability that the negotiation stops before each new round (e.g. the car leaves).
-    Returns a dict: price (None if no deal), round, offers of the seller and of the buyer, gains.
-    """
-    rng = np.random.default_rng(seed)
-    s_offers, b_offers = [], []
-    price, end = None, rounds - 1
-    for r in range(rounds):
-        if r > 0 and rng.random() < breakdown:
-            end = r - 1
-            break
-        t = r / (rounds - 1)
-        s = seller.clip(seller.propose(t, s_offers, b_offers))
-        b = buyer.clip(buyer.propose(t, b_offers, s_offers))
-        s_offers.append(s)
-        b_offers.append(b)
-        if b >= s - tol:
-            price, end = (s + b) / 2, r
-            break
-    return {"price": price, "round": end, "seller": s_offers, "buyer": b_offers,
-            "gains": (seller.gain(price), buyer.gain(price))}
-
-
-def plot_negotiation(result, ax=None, title=""):
-    """Offers of both agents round after round, and the deal if any."""
-    ax = ax or plt.subplots(figsize=(6.5, 3.5))[1]
-    ax.plot(result["seller"], "o-", label="seller (car owner)")
-    ax.plot(result["buyer"], "s-", label="buyer (grid operator)")
-    if result["price"] is not None:
-        ax.axhline(result["price"], ls=":", color="gray")
-        ax.annotate(f"deal at {result['price']:.1f} (round {result['round']})",
-                    (0, result["price"]), textcoords="offset points", xytext=(4, 4), fontsize=9)
-    else:
-        ax.annotate("no deal", (len(result["seller"]) - 1, result["seller"][-1]),
-                    textcoords="offset points", xytext=(4, 4), color="tab:red")
-    ax.set_xlabel("round")
-    ax.set_ylabel("price (c/kWh)")
-    ax.set_title(title)
-    ax.legend(fontsize=8)
-    return ax
-
-
-def tournament(sellers, buyers, rounds=20, breakdown=0.0, runs=300, seed=0):
-    """Mean gains of each seller strategy (rows) against each buyer strategy (columns).
-
-    sellers, buyers: functions without argument that create a new negotiator, e.g.
-    lambda: TimeDependent("seller", beta=0.3). Returns (seller gains, buyer gains, deal rates).
-    """
-    rng = np.random.default_rng(seed)
-    S, B, R = {}, {}, {}
-    for make_b in buyers:
-        name_b = make_b().name
-        col_s, col_b, col_r = [], [], []
-        for make_s in sellers:
-            res = [negotiate(make_s(), make_b(), rounds, breakdown, rng.integers(1 << 30))
-                   for _ in range(runs if breakdown else 1)]
-            col_s.append(np.mean([r["gains"][0] for r in res]))
-            col_b.append(np.mean([r["gains"][1] for r in res]))
-            col_r.append(np.mean([r["price"] is not None for r in res]))
-        S[name_b], B[name_b], R[name_b] = col_s, col_b, col_r
-    index = [m().name for m in sellers]
-    return (pd.DataFrame(S, index=index).round(2), pd.DataFrame(B, index=index).round(2),
-            pd.DataFrame(R, index=index).round(2))
-
-
-def zeuthen(u_seller, u_buyer, prices, start_seller=None, start_buyer=None):
-    """Monotonic Concession Protocol with the Zeuthen strategy, on a grid of prices.
-
-    u_seller(p), u_buyer(p): utilities of an agreement at price p (0 = no deal).
-    At each round, each agent computes its risk = (U(own offer) - U(other's offer)) / U(own offer):
-    the agent with the smaller risk (more to lose in a conflict) concedes one step on the grid.
-    Returns the list of (seller offer, buyer offer) and the final price.
-    """
-    prices = np.sort(np.asarray(prices, dtype=float))
-    i_s = len(prices) - 1 if start_seller is None else int(np.argmin(abs(prices - start_seller)))
-    i_b = 0 if start_buyer is None else int(np.argmin(abs(prices - start_buyer)))
-    history = [(prices[i_s], prices[i_b])]
-    while i_b < i_s:
-        ps, pb = prices[i_s], prices[i_b]
-        risk_s = (u_seller(ps) - u_seller(pb)) / u_seller(ps) if u_seller(ps) > 0 else 0
-        risk_b = (u_buyer(pb) - u_buyer(ps)) / u_buyer(pb) if u_buyer(pb) > 0 else 0
-        if risk_s <= risk_b:
-            i_s -= 1
-        if risk_b <= risk_s:
-            i_b += 1
-        history.append((prices[i_s], prices[i_b]))
-    return history, prices[i_s] if i_b == i_s else (prices[i_s] + prices[i_b]) / 2
