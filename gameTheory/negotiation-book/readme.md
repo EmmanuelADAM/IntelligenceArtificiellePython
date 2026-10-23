@@ -8,12 +8,11 @@
 | 1. Sharing a ride | How much should the passenger pay the driver? | build $(S, d)$, compute the Nash solution, add an outside option |
 | 2. An eco-bonus for electric bikes | Who really benefits from a subsidy? | compare Nash and Kalai-Smorodinsky, add a price cap, a risk-averse buyer |
 | 3. A shared loading bay | How to share three delivery slots? | isolated agreements, social welfare, lotteries (alternating days) |
-| 4. Waiting at the charging station | What happens when agents make offers in turn? | ultimatum game, Rubinstein model, patience and urgency |
-| 5. Negotiating agents | How do software agents negotiate a price? | Boulware, Conceder, Tit-for-Tat, Distance, Zeuthen; risk of breakdown |
+| 4. Offers in turn | What price for the ride when Alice and Bob make offers in turn? | ultimatum game, Rubinstein model, patience, complete information |
 
 ## Content
 
-- Books 1 to 3 are the cooperative approach, 4 and 5 the non-cooperative one.
+- Books 1 to 3 are the cooperative approach, 4  the non-cooperative one.
 - Exercises need **3 to 8 lines** of code. Try first; an example of  solution is in the cell below (folded in the book).
 - `bargain.py` contains generic little functions (compute equilibirum, pareto points, ...) and specific ones, dedicated to the exercises, with predefined values (you can cut and paste the functions to try other values) .
 
