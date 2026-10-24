@@ -1,6 +1,6 @@
 # TP (Old) Solvers
 
-(TP basé sur le cours [logique : calcul propositionnel](./logiquesCalculPropositionnel.pdf))
+(TP basé sur le cours *logique : calcul propositionnel*.
 
 ## DP (Davis et Putman)
 - reprenez le [code fourni](./DavisPutman.py) et optimisez le selon votre choix pour tenter d'accélérer la résolution. C'est à dire que vous tenterez d'organiser les choix lorsque plusieurs sont possibles à l'activation d'une règle.

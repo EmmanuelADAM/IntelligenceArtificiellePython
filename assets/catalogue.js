@@ -31,17 +31,11 @@ window.CATALOGUE = [
     title: "Logique classique",
     tagline: "Satisfiabilité, DP, DPLL",
     intro:
-      "Encoder un problème en formule booléenne, puis écrire et accélérer les solveurs historiques. Le cours sur le calcul propositionnel sert de base aux deux sujets.",
+      "Encoder un problème en formule booléenne, puis écrire et accélérer les solveurs historiques.",
     groups: [
       {
-        title: "Cours et sujets",
+        title: "Sujets",
         items: [
-          {
-            file: "logiquesCalculPropositionnel.pdf",
-            title: "Logique : calcul propositionnel",
-            type: "cours",
-            desc: "Support de cours : formules, forme clausale, algorithmes DP et DPLL en pseudo-code.",
-          },
           {
             file: "TPOldSolver.md",
             title: "Solveurs DP et DPLL",
