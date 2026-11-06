@@ -509,16 +509,16 @@ window.CATALOGUE = [
   /* ---------------------------------------------------------------- */
   {
     id: "jeux",
-    title: "Théorie des jeux et négociation",
-    tagline: "Nash, Axelrod, agents négociateurs",
+    title: "Game theory and negotiation",
+    tagline: "Nash, Axelrod tournaments, negotiating agents",
     lang: "en",
     intro:
-      "Quatre mini-livres en anglais. Chaque chapitre alterne démonstrations et questions de 3 à 10 lignes de code, avec la solution juste en dessous.",
+      "Four mini-books in English. Each chapter alternates between demonstrations and questions—consisting of 3 to 10 lines of code—with the solution provided immediately below.",
     books: [
       {
         folder: "gameTheory/matrix-games-book",
         title: "Matrix games with nashpy",
-        desc: "Cinq jeux à deux joueurs résolus à la main par le principe d'indifférence, puis vérifiés avec nashpy.",
+        desc: "Five two-player games solved by hand using the principle of indifference, then verified with the nashpy library.",
         libs: ["nashpy"],
         helper: "myNashTools.py",
         chapters: [
@@ -532,7 +532,7 @@ window.CATALOGUE = [
       {
         folder: "gameTheory/axelrod-book",
         title: "Repeated games with axelrod",
-        desc: "Le même jeu joué de nombreuses fois : matchs, tournois à la Axelrod, puis évolution d'une population de stratégies.",
+        desc: "The same game played many times: matches, tournaments in the style of Axelrod, then evolution of a population of strategies.",
         libs: ["axelrod"],
         helper: "myIGTools.py",
         chapters: [
@@ -544,7 +544,7 @@ window.CATALOGUE = [
       {
         folder: "gameTheory/negotiation-book",
         title: "Negotiation for mobility",
-        desc: "Solutions de Nash et de Kalai-Smorodinsky, bien-être social, puis offres alternées et modèle de Rubinstein.",
+        desc: "Nash and Kalai-Smorodinsky solutions, social welfare, then alternating offers and Rubinstein's model.",
         libs: ["NumPy", "Matplotlib"],
         helper: "bargain.py",
         chapters: [
@@ -557,7 +557,7 @@ window.CATALOGUE = [
       {
         folder: "gameTheory/carpool-agents-book",
         title: "Negotiating agents: a carpool price",
-        desc: "Alice conduit à Valenciennes, Bob cherche une place : deux agents négocient le prix offre après offre.",
+        desc: "Alice is driving to Valenciennes, Bob is looking for a parking spot: two agents negotiate the price, offer after offer.",
         libs: ["NumPy", "Matplotlib"],
         helper: "carpool.py",
         chapters: [
