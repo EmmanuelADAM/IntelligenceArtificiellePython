@@ -1,10 +1,11 @@
-"""Helpers for the "Negotiating agents: a carpool price" Jupyter Book (keep this file next to the notebooks).
+"""Helpers for the "Negotiating agents: a carpool price" Jupyter Book 
+(library, so keep this file next to the notebooks).
 
 The situation
 -------------
-Alice drives tomorrow to Valenciennes. Picking up Bob costs her a 4 EUR detour; Bob's alternative is the
-train (18 EUR). On a carpool app, an agent negotiates for each of them:
-
+Alice drives tomorrow to Valenciennes. 
+Picking up Bob costs her a 4 EUR detour; Bob's alternative is the train (18 EUR). 
+On a carpool app, an agent negotiates for each of them:  
 * Alice's agent first asks 18 EUR and never asks less than 4 EUR (her limit);
 * Bob's agent first offers 4 EUR and never offers more than 18 EUR (the train);
 * at each round, both agents send an offer at the same time;
@@ -18,22 +19,27 @@ A strategy is a plain function  strategy(r, T, mine, theirs) -> next offer
 import matplotlib.pyplot as plt
 import numpy as np
 
+#------------GLOBAL VARIABLES------------------------------------------------
 DETOUR, TRAIN = 4, 18          # EUR: Alice's limit and Bob's limit
 ALICE_START, BOB_START = 18, 4  # EUR: first offers
 T = 10                          # number of rounds before the departure
 
 
 def gains(price):
-    """(Alice's gain, Bob's gain) for a price; (0, 0) if there is no deal (price None)."""
+    """Return (Alice's gain, Bob's gain) for a price; (0, 0) if there is no deal (price None)."""
     if price is None:
         return 0.0, 0.0
     return price - DETOUR, TRAIN - price
 
 
 def negotiate(alice, bob, T=T, risk=0.0, seed=None, tol=0.5):
-    """Run a negotiation between two strategies.
-
-    risk: probability that the negotiation stops before each new round (Bob takes the train...).
+    """Run a negotiation between two strategies.  
+    parameters:  
+    alice, bob: the two strategies (functions)  
+    T: number of rounds  
+    risk: probability that the negotiation stops before each new round (Bob takes the train...).  
+    tol: the tolerance for a deal (the offers can cross by up to tol EUR)  
+    seed: for the random number generator (for reproducibility)  
     Returns a dict: price (None if no deal), round of the deal, offers of Alice and of Bob, gains.
     """
     rng = np.random.default_rng(seed)
@@ -68,7 +74,7 @@ def show(result, ax=None, title=""):
     return ax
 
 
-# ---------------------------------------------------------------- the strategies of the course
+# ----------- the strategies presented in the course
 def time_dependent(r, T, start, limit, beta):
     """p(t) = start + (limit - start) * t^(1/beta), with t = r / (T-1) from 0 to 1."""
     t = r / (T - 1)
