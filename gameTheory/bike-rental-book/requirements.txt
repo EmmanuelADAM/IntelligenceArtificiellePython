@@ -1,0 +1,7 @@
+jupyter-book>=2
+axelrod>=4.13
+nashpy
+numpy
+pandas
+matplotlib
+ipykernel
