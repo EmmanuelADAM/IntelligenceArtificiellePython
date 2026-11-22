@@ -1,0 +1,16 @@
+# tectonic_moyen : 6x6, solution unique
+# carte des régions (une lettre par région)
+AAAABB
+ACCDDE
+CCFDDE
+GCFFFE
+GHHFEE
+HHHIII
+---
+# indices ('.' = case vide)
+1....2
+......
+......
+.....3
+......
+.5....

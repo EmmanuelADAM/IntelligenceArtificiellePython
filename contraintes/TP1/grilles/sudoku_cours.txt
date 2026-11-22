@@ -1,0 +1,11 @@
+# sudoku_cours : la grille de l'image sudokuARemplir.png
+# '.' = case vide
+.3.7.....
+..2...6..
+8...13..5
+.6..745..
+4..9.....
+...8....7
+.....9...
+3...45..1
+.8.....3.

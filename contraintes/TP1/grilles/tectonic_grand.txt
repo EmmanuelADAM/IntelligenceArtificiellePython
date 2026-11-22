@@ -1,0 +1,20 @@
+# tectonic_grand : 8x6, solution unique
+# carte des régions (une lettre par région)
+AABBCC
+AABBCC
+DDEFFC
+DDEFFG
+HHIFGG
+HIIJGG
+KKIJJL
+KKIJJL
+---
+# indices ('.' = case vide)
+.2...2
+......
+.....3
+......
+....3.
+......
+...251
+......

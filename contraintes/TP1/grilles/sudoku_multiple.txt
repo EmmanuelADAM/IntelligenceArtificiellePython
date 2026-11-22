@@ -1,0 +1,11 @@
+# sudoku_multiple : grille mal posée : plusieurs solutions
+# '.' = case vide
+.3.915...
+.9...6.31
+......56.
+..76..3..
+9.......8
+..543.9.6
+...56...3
+32..9..5.
+45.32.1..

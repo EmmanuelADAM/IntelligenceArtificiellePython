@@ -1,0 +1,14 @@
+# tectonic_petit : 5x4 (exemple du cours)
+# carte des régions (une lettre par région)
+AABB
+AABB
+CCDB
+CCDD
+CEDD
+---
+# indices ('.' = case vide)
+....
+3..5
+..32
+5...
+...4

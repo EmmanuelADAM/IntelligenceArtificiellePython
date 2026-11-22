@@ -1,0 +1,26 @@
+# tectonic_cours : 11x5, la grille de l'image TecToNic.png (exemple_2 de TecToNic.java)
+# carte des regions (une lettre par region)
+AAABB
+CADBB
+CCDDB
+CCDDE
+FFEEE
+GFFFE
+GHIII
+HHIIJ
+HHJJJ
+KKLLJ
+KLLLM
+---
+# indices ('.' = case vide)
+..3.5
+.....
+..1..
+4....
+..1..
+.4...
+.....
+3....
+..1.2
+.....
+.....

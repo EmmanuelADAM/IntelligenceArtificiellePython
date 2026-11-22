@@ -1,0 +1,16 @@
+# tectonic_insoluble : 6x6, aucune solution
+# carte des régions (une lettre par région)
+AAAABB
+ACCDDE
+CCFDDE
+GCFFFE
+GHHFEE
+HHHIII
+---
+# indices ('.' = case vide)
+13...2
+......
+......
+.....3
+......
+.5....
