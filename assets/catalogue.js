@@ -313,7 +313,7 @@ window.CATALOGUE = [
           {
             file: "choixClimLogiqueFloue.ipynb",
             title: "Régler un climatiseur",
-            type: "tp",
+            type: "demo",
             desc: "Choisir l'action d'un climatiseur à partir de la température ambiante et de la température souhaitée.",
             libs: ["skfuzzy"],
           },
