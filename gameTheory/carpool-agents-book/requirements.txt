@@ -1,0 +1,4 @@
+jupyter-book>=2
+numpy
+matplotlib
+ipykernel
